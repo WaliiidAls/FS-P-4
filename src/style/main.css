@@ -1,0 +1,337 @@
+/* أضف قواعد CSS هنا */
+
+/* tags */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Avenir;
+  color: #3d3d3d;
+}
+a,
+button {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s linear;
+  outline: none;
+}
+a:hover,
+button:hover {
+  transform: translateY(-4px);
+}
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 60px;
+  position: absolute;
+  top: 50px;
+}
+nav h3 {
+  font-weight: 300;
+}
+nav .left {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+}
+nav .left div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 300px;
+}
+nav .right {
+  display: flex;
+}
+nav .right h3 {
+  margin: 0 10px;
+}
+/* hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.hero .left {
+  background-image: url(../img/hero.png);
+  height: 832px;
+  width: 721px;
+}
+.hero .left img {
+  position: absolute;
+  left: 45%;
+  top: 20%;
+}
+.hero .right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 0 0 40px;
+  height: 832px;
+  width: 721px;
+}
+.hero .right h1 {
+  font-size: 60px;
+  width: 400px;
+}
+.hero .right h6 {
+  font-size: 15px;
+  font-weight: 400;
+  width: 450px;
+  padding: 0 0 40px 0;
+}
+.hero .right button {
+  border: none;
+  background-color: #3d3d3d;
+  color: white;
+  padding: 20px 35px;
+}
+/* Content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px;
+}
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 100px 0;
+}
+main .container .item a:hover {
+  transform: translateY(-10px);
+}
+main .item {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: 350px;
+  margin: 30px;
+}
+.item .details {
+  width: 275px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px 0;
+}
+.item .details h3 {
+  font-size: 15px;
+  font-weight: 400;
+}
+main button {
+  border: 1px solid #3d3d3d;
+  background-color: transparent;
+  padding: 20px 45px;
+  outline: none;
+}
+/* ads */
+.ads {
+  display: flex;
+  align-content: center;
+  background-color: #eeeeee;
+  margin: 100px;
+}
+.ads .mailing {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+.ads .mailing h3 {
+  font-size: 19px;
+  font-weight: 500;
+  width: 335px;
+}
+.ads .mailing input {
+  background: url("../img/arrow.svg") no-repeat right 10px center;
+  border: 1px solid black;
+  margin: 20px 0;
+  padding: 7px;
+  outline: none;
+}
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px;
+}
+footer h3 {
+  font-weight: 400;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+/* showing */
+.showing .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 60px 0;
+  width: 100%;
+}
+.showing .container .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 80px;
+  height: 400px;
+}
+.showing .container .left img {
+  width: 80px;
+  height: 100px;
+}
+.showing .container img {
+  width: 450px;
+  height: 500px;
+}
+.showing .container .right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 450px;
+  height: 500px;
+}
+.showing .container .right h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.showing .container .right h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.showing .container .right h6 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+}
+.showing .container .right .color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  margin: 30px 0;
+}
+.showing .container .right .color div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+}
+.showing .container .right .color span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+.showing .container .right .color span div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #d07071;
+}
+.showing .container .right .color span div:nth-child(2) {
+  width: 25px;
+  height: 25px;
+  background-color: #7074d0;
+}
+.showing .container .right .color span div:nth-child(3) {
+  width: 25px;
+  height: 25px;
+  background-color: #333333;
+}
+.showing .container .right .color span div .selected {
+  background: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 25px;
+}
+.showing .container .quantity {
+  display: flex;
+  width: 400px;
+}
+.showing .container .quantity h4 {
+  text-align: center;
+  line-height: 59px;
+  padding: 0 20px;
+  border: 1px solid #3d3d3d;
+  margin: 0 15px 0 0;
+}
+.showing .container .quantity button {
+  color: white;
+  background-color: #3d3d3d;
+}
+/* might also like */
+.showing .more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.showing .more h1 {
+  font-weight: 300;
+}
+.showing .more .container {
+  display: flex;
+}
+.showing .more .container .item,
+.showing .more .container .item img {
+  width: 275px;
+  height: 350px;
+}
+/* cart */
+main.cart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 100px 10px;
+}
+main.cart h1 {
+  font-size: 25px;
+  font-weight: 400;
+  padding: 0 0 10px 0;
+}
+main.cart table {
+  border-collapse: collapse;
+  width: 100%;
+}
+main.cart table td {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 50px 0;
+  width: 20%;
+  font-weight: 500;
+}
+main.cart table img {
+  width: 80px;
+  height: 80px;
+}
+main.cart table tr:last-child {
+  background-color: #e6e6e6;
+}
+main.cart table tr:last-child td:first-child {
+  padding-left: 100px;
+}
+main.cart table tr:last-child td:last-child button {
+  padding: 20px 31.5px;
+}
