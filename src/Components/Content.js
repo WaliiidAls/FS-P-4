@@ -8,7 +8,7 @@ class Content extends Component {
         <div className="container">
           {products.data.map((item) => (
             <a
-              href="#"
+              href="/#"
               onClick={() =>
                 this.props.handleItemClick({
                   item,
@@ -30,7 +30,7 @@ class Content extends Component {
             </a>
           ))}
         </div>
-        <a href="#">
+        <a href="/#">
           <button>MORE PRODUCTS</button>
         </a>
       </main>

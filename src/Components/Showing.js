@@ -1,9 +1,24 @@
 import React, { Component } from "react";
 
 class Showing extends Component {
+  state = {
+    colors: [
+      { id: 0, selected: true },
+      { id: 1, selected: false },
+      { id: 2, selected: false },
+    ],
+    added: false,
+  };
   render() {
     let { showing, images } = this.props.package;
     let { suggestions } = this.props;
+    const handleColor = (item) => {
+      const newState = { ...this.state };
+      newState.colors.map((i) =>
+        i.id === item.id ? (i.selected = true) : (i.selected = false)
+      );
+      this.setState(newState);
+    };
     return (
       <main className="showing">
         <div className="container">
@@ -27,22 +42,30 @@ class Showing extends Component {
                 <h3>Color:</h3>Pink
               </div>
               <span>
-                <div>
-                  <div className="selected"></div>
-                </div>
-                <div></div>
-                <div></div>
+                {this.state.colors.map((item) =>
+                  item.selected ? (
+                    <div key={item.id}>
+                      <div className="selected"></div>
+                    </div>
+                  ) : (
+                    <div key={item.id} onClick={() => handleColor(item)}></div>
+                  )
+                )}
               </span>
             </div>
             <div className="quantity">
               <h4>01</h4>
               <a
-                href="#"
+                href="/#"
                 onClick={() =>
-                  this.props.handleAddToCart(this.props.package.showing)
+                  this.props.handleAddToCart(this.props.package.showing, () =>
+                    this.setState({ ...this.state, added: true })
+                  )
                 }
               >
-                <button>ADD TO CART</button>
+                <button className={this.state.added ? "added" : ""}>
+                  {this.state.added ? "ADDED" : "ADD TO CART"}
+                </button>
               </a>
             </div>
           </div>
@@ -52,7 +75,7 @@ class Showing extends Component {
           <div className="container">
             {suggestions.data.slice(3, 6).map((item) => (
               <a
-                href="#"
+                href="/#"
                 onClick={() =>
                   this.props.handleItemClick({
                     item,
@@ -76,7 +99,7 @@ class Showing extends Component {
               </a>
             ))}
           </div>
-          <a href="#">
+          <a href="/#">
             <button>MORE PRODUCTS</button>
           </a>
         </div>

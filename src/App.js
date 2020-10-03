@@ -47,10 +47,12 @@ class App extends React.Component {
       const newState = { ...this.state, showing: null };
       this.setState(newState);
     };
-    const handleAddToCart = (item) => {
+    const handleAddToCart = (item, callback) => {
+      item.item.quantity++;
       const newState = { ...this.state };
       newState.cart.push(item);
-      this.setState(newState, alert("done"));
+      this.setState(newState);
+      callback();
     };
     const handleGoCart = () => {
       const newState = { ...this.state, showing: "cart" };
@@ -65,7 +67,7 @@ class App extends React.Component {
         />
         {this.state.showing === "cart" ? (
           <>
-            <Cart cart={this.state.cart} />
+            <Cart handleGoBack={() => handleGoBack()} cart={this.state.cart} />
           </>
         ) : this.state.showing ? (
           <>
@@ -73,7 +75,9 @@ class App extends React.Component {
               package={showing}
               handleItemClick={(item) => handleItemClick(item)}
               suggestions={suggestions}
-              handleAddToCart={(item) => handleAddToCart(item)}
+              handleAddToCart={(item, callback) =>
+                handleAddToCart(item, callback)
+              }
             />
           </>
         ) : (

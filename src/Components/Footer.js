@@ -5,13 +5,13 @@ class Footer extends Component {
     return (
       <footer>
         <ul>
-          <a href="#">
+          <a href="/#">
             <li>About</li>
           </a>
-          <a href="#">
+          <a href="/#">
             <li>Customer Care</li>
           </a>
-          <a href="#">
+          <a href="/#">
             <li>Instagram</li>
           </a>
         </ul>

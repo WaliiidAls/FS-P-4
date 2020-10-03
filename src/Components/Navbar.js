@@ -7,20 +7,20 @@ class Navbar extends Component {
         <div className="left">
           <img src={this.props.images.logo[0]} alt="logo" />
           <div>
-            <a href="#" onClick={() => this.props.handleGoBack()}>
+            <a href="/#" onClick={() => this.props.handleGoBack()}>
               <h3>Home</h3>
             </a>
-            <a href="#">
+            <a href="/#" onClick={() => this.props.handleGoBack()}>
               <h3>Collection</h3>
             </a>
-            <a href="#">
+            <a href="/#">
               <h3>Contact</h3>
             </a>
           </div>
         </div>
         <div className="right">
           <img src={this.props.images.cart[0]} alt="cart" />
-          <a href="#" onClick={() => this.props.handleGoCart()}>
+          <a href="/#" onClick={() => this.props.handleGoCart()}>
             <h3>Cart</h3>
           </a>
         </div>

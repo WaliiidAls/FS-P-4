@@ -241,10 +241,12 @@ footer ul {
   align-items: center;
   width: 100px;
 }
-.showing .container .right .color span div:nth-child(1) {
+.showing .container .right .color span div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.showing .container .right .color span div:nth-child(1) {
   width: 25px;
   height: 25px;
   background-color: #d07071;
@@ -279,6 +281,10 @@ footer ul {
 .showing .container .quantity button {
   color: white;
   background-color: #3d3d3d;
+}
+.showing .container .quantity button.added {
+  border-color: #333333;
+  background-color: #e6e6e6;
 }
 /* might also like */
 .showing .more {
